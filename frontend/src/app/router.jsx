@@ -2,12 +2,35 @@ import React from "react";
 import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import NotFoundPage from "../pages/not-found-page";
+import AppLayout from "../layouts/app-layout";
 const HomePage = lazy(() => import("../pages/home-page"));
+const LoginPage = lazy(() => import("../modules/auth/pages/login-page"));
+const RegisterPage = lazy(() => import("../modules/auth/pages/register-page"));
+const AboutUs = lazy(() => import("../pages/about-us"));
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />,
+    element: <AppLayout />,
+    children: [
+      {
+        path: "/",
+        element: <HomePage />,
+      },
+      {
+        path: "/about-us",
+        element: <AboutUs />,
+      },
+    ],
   },
+  {
+    path: "/login",
+    element: <LoginPage />,
+  },
+  {
+    path: "/register",
+    element: <RegisterPage />,
+  },
+
   {
     path: "*",
     element: <NotFoundPage />,
