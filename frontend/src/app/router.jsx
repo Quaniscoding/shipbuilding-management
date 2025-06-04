@@ -3,10 +3,15 @@ import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import NotFoundPage from "../pages/not-found-page";
 import AppLayout from "../layouts/app-layout";
+import AdminLayout from "../layouts/admin-layout";
 const HomePage = lazy(() => import("../pages/home-page"));
 const LoginPage = lazy(() => import("../modules/auth/pages/login-page"));
 const RegisterPage = lazy(() => import("../modules/auth/pages/register-page"));
 const AboutUs = lazy(() => import("../pages/about-us"));
+const ManageUsers = lazy(() => import("../modules/users/pages/manage-user"));
+const ManageProducts = lazy(() =>
+  import("../modules/products/pages/products-management")
+);
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -19,6 +24,20 @@ export const router = createBrowserRouter([
       {
         path: "/about-us",
         element: <AboutUs />,
+      },
+    ],
+  },
+  {
+    path: "/admin",
+    element: <AdminLayout />,
+    children: [
+      {
+        path: "/admin/users",
+        element: <ManageUsers />,
+      },
+      {
+        path: "/admin/products",
+        element: <ManageProducts />,
       },
     ],
   },
