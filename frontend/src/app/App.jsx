@@ -1,11 +1,37 @@
-import React from "react";
-
-import "../styles/App.css";
+import React, { useEffect } from "react";
+import { RouterProvider } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import { router } from "./router";
+import { authActions } from "../modules/auth/store/auth-slice";
+import { useAppDispatch, useAppSelector } from "../store";
+import LoadingOverlay from "../components/ui/loading-overlay";
+import "../../src/styles/App.css";
 function App() {
+  const { isLoading } = useAppSelector((state) => state.auth);
+
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(authActions.getCurrentUser());
+  }, []);
+
+  if (isLoading) return <LoadingOverlay show={true} />;
+
   return (
-    <>
-      <h1 class="text-3xl font-bold underline">Hello world!</h1>
-    </>
+    <React.Fragment>
+      <RouterProvider router={router}></RouterProvider>
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
+    </React.Fragment>
   );
 }
 
