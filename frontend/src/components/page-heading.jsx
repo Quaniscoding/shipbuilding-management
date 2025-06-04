@@ -13,8 +13,6 @@ const navLinks = [
   { label: "Trang chủ", path: "/" },
   { label: "Giới thiệu", path: "/about-us" },
   { label: "Sản phẩm", path: "/products" },
-  { label: "Tin tức", path: "/blog" },
-  { label: "Tuyển dụng", path: "/career" },
   { label: "Khách hàng", path: "/clients" },
   { label: "Media", path: "/media" },
 ];
@@ -59,7 +57,7 @@ export default function PageHeading() {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <img
-              src="/logo.png"
+              src="/images/logo.png"
               alt="Logo"
               className="h-10 w-auto"
               style={{ minWidth: 40 }}
