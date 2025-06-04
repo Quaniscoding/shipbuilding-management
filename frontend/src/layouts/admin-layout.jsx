@@ -23,9 +23,9 @@ const menuItems = [
     label: "Quản lý người dùng",
   },
   {
-    key: "/admin/products",
+    key: "/admin/projects",
     icon: <AppstoreOutlined />,
-    label: "Quản lý sản phẩm",
+    label: "Quản lý dự án",
   },
   {
     key: "/admin/settings",

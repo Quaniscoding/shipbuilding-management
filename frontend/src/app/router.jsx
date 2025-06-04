@@ -9,8 +9,8 @@ const LoginPage = lazy(() => import("../modules/auth/pages/login-page"));
 const RegisterPage = lazy(() => import("../modules/auth/pages/register-page"));
 const AboutUs = lazy(() => import("../pages/about-us"));
 const ManageUsers = lazy(() => import("../modules/users/pages/manage-user"));
-const ManageProducts = lazy(() =>
-  import("../modules/products/pages/products-management")
+const ManageProjects = lazy(() =>
+  import("../modules/projects/pages/project-management-page")
 );
 export const router = createBrowserRouter([
   {
@@ -36,8 +36,8 @@ export const router = createBrowserRouter([
         element: <ManageUsers />,
       },
       {
-        path: "/admin/products",
-        element: <ManageProducts />,
+        path: "/admin/projects",
+        element: <ManageProjects />,
       },
     ],
   },
