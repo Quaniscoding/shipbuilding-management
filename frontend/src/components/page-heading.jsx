@@ -12,8 +12,8 @@ import { useLocation } from "react-router-dom";
 const navLinks = [
   { label: "Trang chủ", path: "/" },
   { label: "Giới thiệu", path: "/about-us" },
-  { label: "Sản phẩm", path: "/products" },
-  { label: "Khách hàng", path: "/clients" },
+  { label: "Sản phẩm", path: "/projects" },
+  { label: "Khách hàng", path: "/customers" },
   { label: "Media", path: "/media" },
 ];
 
@@ -72,11 +72,10 @@ export default function PageHeading() {
               <li key={item.path}>
                 <a
                   href={item.path}
-                  className={`hover:text-blue-700 transition ${
-                    isActive(item.path)
-                      ? "text-blue-700 font-bold underline underline-offset-8"
-                      : ""
-                  }`}
+                  className={`hover:text-blue-700 transition ${isActive(item.path)
+                    ? "text-blue-700 font-bold underline underline-offset-8"
+                    : ""
+                    }`}
                 >
                   {item.label}
                 </a>
@@ -127,11 +126,10 @@ export default function PageHeading() {
                   <li key={item.path}>
                     <a
                       href={item.path}
-                      className={`block py-2 px-2 rounded hover:bg-blue-50 hover:text-blue-700 transition ${
-                        isActive(item.path)
-                          ? "text-blue-700 font-bold bg-blue-50"
-                          : ""
-                      }`}
+                      className={`block py-2 px-2 rounded hover:bg-blue-50 hover:text-blue-700 transition ${isActive(item.path)
+                        ? "text-blue-700 font-bold bg-blue-50"
+                        : ""
+                        }`}
                       onClick={() => setOpen(false)}
                     >
                       {item.label}

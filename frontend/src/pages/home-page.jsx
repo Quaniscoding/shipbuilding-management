@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaShip, FaClock, FaGlobe } from "react-icons/fa"; // Thêm FaGlobe
+import { FaShip, FaClock, FaGlobe } from "react-icons/fa";
 
 const services = [
   {
@@ -24,9 +24,8 @@ function ServiceCards() {
         <motion.div
           key={i}
           whileHover={{ scale: 1.05 }}
-          className={`${
-            i === 0 ? "bg-blue-900 text-white" : "bg-white border text-gray-800"
-          } rounded-xl p-5 shadow transition-transform`}
+          className={`${i === 0 ? "bg-blue-900 text-white" : "bg-white border text-gray-800"
+            } rounded-xl p-5 shadow transition-transform`}
         >
           <div className="flex flex-col items-start">
             {service.icon}
