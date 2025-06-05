@@ -7,6 +7,8 @@ const HomePage = lazy(() => import("../pages/home-page"));
 const LoginPage = lazy(() => import("../modules/auth/pages/login-page"));
 const RegisterPage = lazy(() => import("../modules/auth/pages/register-page"));
 const AboutUs = lazy(() => import("../pages/about-us"));
+const Projects = lazy(() => import("../pages/projects"));
+const Customers = lazy(() => import("../pages/customers"));
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -19,6 +21,14 @@ export const router = createBrowserRouter([
       {
         path: "/about-us",
         element: <AboutUs />,
+      },
+      {
+        path: "/projects",
+        element: <Projects />,
+      },
+      {
+        path: "/customers",
+        element: <Customers />,
       },
     ],
   },
