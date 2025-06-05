@@ -3,6 +3,7 @@ import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import NotFoundPage from "../pages/not-found-page";
 import AppLayout from "../layouts/app-layout";
+import AdminLayout from "../layouts/admin-layout";
 const HomePage = lazy(() => import("../pages/home-page"));
 const LoginPage = lazy(() => import("../modules/auth/pages/login-page"));
 const RegisterPage = lazy(() => import("../modules/auth/pages/register-page"));
@@ -29,6 +30,20 @@ export const router = createBrowserRouter([
       {
         path: "/customers",
         element: <Customers />,
+      },
+    ],
+  },
+  {
+    path: "/admin",
+    element: <AdminLayout />,
+    children: [
+      {
+        path: "/admin/users",
+        element: <ManageUsers />,
+      },
+      {
+        path: "/admin/products",
+        element: <ManageProducts />,
       },
     ],
   },
