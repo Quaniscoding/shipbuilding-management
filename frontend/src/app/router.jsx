@@ -10,6 +10,7 @@ const RegisterPage = lazy(() => import("../modules/auth/pages/register-page"));
 const AboutUs = lazy(() => import("../pages/about-us"));
 const Projects = lazy(() => import("../pages/projects"));
 const Customers = lazy(() => import("../pages/customers"));
+const ManageUsers = lazy(() => import("../modules/admin/pages/manage-users"));
 export const router = createBrowserRouter([
   {
     path: "/",
