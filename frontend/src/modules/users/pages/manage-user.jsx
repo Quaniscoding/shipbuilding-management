@@ -19,7 +19,7 @@ import { toast } from "react-toastify";
 
 const initialData = [
   {
-    _id: 1,
+    _id: "user_001",
     username: "nguyenvana",
     email: "a@dongtau.com",
     password: "******",
@@ -29,7 +29,7 @@ const initialData = [
     createdAt: "2024-06-01",
   },
   {
-    _id: 2,
+    _id: "user_002",
     username: "tranthib",
     email: "b@dongtau.com",
     password: "******",
@@ -39,7 +39,7 @@ const initialData = [
     createdAt: "2024-06-02",
   },
   {
-    _id: 3,
+    _id: "user_003",
     username: "levanc",
     email: "c@dongtau.com",
     password: "******",

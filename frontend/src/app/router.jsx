@@ -8,9 +8,16 @@ const HomePage = lazy(() => import("../pages/home-page"));
 const LoginPage = lazy(() => import("../modules/auth/pages/login-page"));
 const RegisterPage = lazy(() => import("../modules/auth/pages/register-page"));
 const AboutUs = lazy(() => import("../pages/about-us"));
+<<<<<<< HEAD
 const Projects = lazy(() => import("../pages/projects"));
 const Customers = lazy(() => import("../pages/customers"));
 const ManageUsers = lazy(() => import("../modules/admin/pages/manage-users"));
+=======
+const ManageUsers = lazy(() => import("../modules/users/pages/manage-user"));
+const ManageProjects = lazy(() =>
+  import("../modules/projects/pages/project-management-page")
+);
+>>>>>>> 88b9c09d6749a46e9d24e37d513b62c97af26fd6
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -43,8 +50,8 @@ export const router = createBrowserRouter([
         element: <ManageUsers />,
       },
       {
-        path: "/admin/products",
-        element: <ManageProducts />,
+        path: "/admin/projects",
+        element: <ManageProjects />,
       },
     ],
   },
