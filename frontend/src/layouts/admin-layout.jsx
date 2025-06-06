@@ -1,5 +1,6 @@
 import React from "react";
 import { Layout, Menu } from "antd";
+import { BsBarChartSteps } from "react-icons/bs";
 import {
   DashboardOutlined,
   UserOutlined,
@@ -26,6 +27,11 @@ const menuItems = [
     key: "/admin/projects",
     icon: <AppstoreOutlined />,
     label: "Quản lý dự án",
+  },
+  {
+    key: "/admin/phases",
+    icon: <BsBarChartSteps />,
+    label: "Quản lý giai đoạn",
   },
   {
     key: "/admin/settings",
